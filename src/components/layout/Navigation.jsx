@@ -1,0 +1,183 @@
+import React, { useState } from 'react'
+import { FaChevronDown, FaFireAlt, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { BiCategoryAlt } from "react-icons/bi";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { CiCirclePlus } from "react-icons/ci";
+
+import { Link } from 'react-router';
+
+
+const Navigation = () => {
+  const [show, setShow] = useState();
+  return (
+    <header>
+      {/**Top Part */}
+      <div className='container'>
+        <div className='flex p-2 shadow-xs items-center justify-between'>
+        <div>
+        <ul>
+          <li className='flex gap-3 items-center'>
+            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>About Us</p>
+            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>My Account</p>
+            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>Wishlist</p>
+            <p className=' text-secondary font-medium text-xs'>Order Tracking</p>
+          </li>
+        </ul>
+        </div>
+        <div>
+        <p className='text-secondary font-medium text-xs'>* Supper Value Deals - Save more with coupons</p>
+        </div>
+        <div className='flex'>
+        <p className='text-secondary font-medium text-xs border-r-2 pr-2'>Need help? Call Us:+ 1800 900</p>
+        <select name="" id="" className='text-secondary font-medium text-xs'>
+          <option value="">English </option>
+        </select>
+        <select name="" id="" className='text-secondary font-medium text-xs'>
+          <option value="">USD </option>
+        </select>
+        </div>
+        </div>
+      </div>
+      {/**Top Part End */}
+      {/*Header Top Part*/}
+      <div className='container'>
+    <div className='flex justify-between items-center py-8'>
+      <Link to="/">
+      <img src="/Logo.png" alt="Logo" />
+      </Link>
+      <div className='border-2 border-brand p-5 rounded w-full max-w-[700px] flex items-center'>
+        <select name="" id="" className='pr-3.5 border-r-2 text-primary'>
+          <option value="">All Categories</option>
+          <option value="">All Categories</option>
+          <option value="">All Categories</option>
+        </select>
+         <input type="text" placeholder='Search for items' className='px-3.5 w-2/3'/>
+         <FaSearch className='ml-auto'/>
+      </div>
+      <div>
+        <ul className='flex gap-6'>
+          <li>
+            <Link to="/" className='flex gap-2 items-end relative text-secondary'>
+              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
+            <FaShoppingCart className='text-3xl text-primary'/>Cart
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className='flex gap-2 items-end relative text-secondary'>
+              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
+            <FaShoppingCart className='text-3xl text-primary'/>Cart
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className='flex gap-2 items-end relative text-secondary'>
+              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
+            <FaShoppingCart className='text-3xl text-primary'/>Cart
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className='flex gap-2 items-end relative text-secondary'>
+            <MdOutlineManageAccounts className='text-3xl text-primary'/>Account
+            </Link>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </div>
+      <nav>
+        <div className='container flex items-center gap-9'>
+          <div className='relative'>
+            <h3 onClick={()=> setShow (!show)} className='px-6 py-3 bg-brand rounded-md text-white font-bold flex items-center gap-2 cursor-pointer'>
+            <BiCategoryAlt /> All Categories <FaChevronDown /></h3>
+            
+            {show &&(
+            
+            <div className='w-md rounded-lg absolute bg-white top-20 left-0 p-7 border-1 border-brand grid grid-cols-2 gap-6'>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-1.svg" alt="category-1" className='w-6'/>
+                  <p>Milks and Dairies</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-2.svg" alt="category-2" className='w-6'/>
+                  <p>Wines & Drinks</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-3.svg" alt="category-3" className='w-6'/>
+                  <p>Clothing & beauty</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-4.svg" alt="category-4" className='w-6'/>
+                  <p>Fresh Seafood</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-5.svg" alt="category-5" className='w-6'/>
+                  <p>Pet Foods & Toy</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-6.svg" alt="category-6" className='w-6'/>
+                  <p>Fast food</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-7.svg" alt="category-7" className='w-6'/>
+                  <p>Baking material</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-8.svg" alt="category-8" className='w-6'/>
+                  <p>Vegetables</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-9.svg" alt="category-9" className='w-6'/>
+                  <p>Fresh Fruit</p>
+                </div>
+                <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
+                  <img src="/category-10.svg" alt="category-1" className='w-6'/>
+                  <p>Bread and Juice</p>
+                </div>
+            </div>
+            )}
+
+          </div>
+          <ul className='flex gap-8 font-bold trxt-primary text-lg'>
+            <li className='flex gap-1 items-center'>
+            <FaFireAlt className='text-brand'/>
+              <Link to="/"className='hover:text-brand transition'>Deals</Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Home </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>About</Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Shop </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Vendors </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Mega menu </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Blog </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Pages </Link>
+            </li>
+            <li>
+              <Link to="/"className='hover:text-brand transition'>Contact</Link>
+            </li>
+          </ul>
+          <Link to="tell:1900 - 888" className='ml-auto flex items-center gap-2'>
+          <TfiHeadphoneAlt/>
+          <div>
+            <p className='text-2xl text-brand font-bold'>1900 - 888</p>
+            <p className='text-sm text-secondary font-medium'>24/7 Support Center</p>
+          </div>
+          </Link>
+        </div>
+      </nav>
+    </header>
+  )
+}
+
+export default Navigation
