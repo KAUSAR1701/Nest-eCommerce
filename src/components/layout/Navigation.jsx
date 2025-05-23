@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaChevronDown, FaFireAlt, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaFireAlt, FaRegWindowClose, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { BiCategoryAlt, BiGitCompare } from "react-icons/bi";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
@@ -11,7 +11,7 @@ import { Link } from 'react-router';
 const Navigation = () => {
   const [show, setShow] = useState();
   return (
-    <header>
+    <header className='relative'>
       {/**Top Part */}
       <div className='container'>
         <div className='md:flex p-2 shadow-xs items-center justify-between'>
@@ -43,8 +43,11 @@ const Navigation = () => {
       {/*Header Top Part*/}
       <div className='container'>
     <div className='flex justify-between items-center py-8 gap-8'>
+      <button className='md:hidden text-2xl text-primary'>
+      <FaBars />
+      </button>
       <Link to="/" className='w-32 lg:w-auto'>
-      <img src="/Logo.png" alt="Logo" />
+      <img src="/Logo.png" alt="Logo" className='w-full'/>
       </Link>
       <div className='border-2 border-brand p-2 lg:p-5 rounded w-full max-w-64 lg:max-w-[700px] hidden md:flex items-center'>
         <select name="" id="" className='pr-3.5 border-r-2 text-primary hidden lg:block'>
@@ -82,10 +85,23 @@ const Navigation = () => {
           </li>
         </ul>
       </div>
+      {/* Mainmenu mobile view */}
+      <nav className=' h-screen bg-[rgba(0,0,0,0.5)] absolute top-0 left-0'>
+        <div className="w-4/5 h-full bg-white">
+          <div className='flex justify-between items-center'>
+          <Link to="/" className='w-32'>
+          <img src="/Logo.png" alt="Logo"/>
+          </Link>
+          <button className='text-2xl'>
+          <FaRegWindowClose />
+          </button>
+          </div>
+        </div>
+      </nav>
       </div>
       </div>
-      {/* Main menu */}
-      <nav>
+      {/* Main menu desktop view */}
+      <nav className='hidden md:block'>
         <div className='container flex items-center gap-9'>
           <div className='relative'>
             <h3 onClick={()=> setShow (!show)} className='px-6 py-3 bg-brand rounded-md text-white font-bold flex items-center gap-2 cursor-pointer'>
