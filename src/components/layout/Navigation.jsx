@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { FaChevronDown, FaFireAlt, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { MdOutlineManageAccounts } from "react-icons/md";
-import { BiCategoryAlt } from "react-icons/bi";
+import { BiCategoryAlt, BiGitCompare } from "react-icons/bi";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { CiCirclePlus } from "react-icons/ci";
+import { GiSelfLove } from "react-icons/gi";
 
 import { Link } from 'react-router';
 
@@ -14,14 +14,14 @@ const Navigation = () => {
     <header>
       {/**Top Part */}
       <div className='container'>
-        <div className='flex p-2 shadow-xs items-center justify-between'>
+        <div className='md:flex p-2 shadow-xs items-center justify-between'>
         <div>
         <ul>
           <li className='flex gap-3 items-center'>
-            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>About Us</p>
-            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>My Account</p>
-            <p className='pr-2 text-secondary font-medium text-xs border-r-2'>Wishlist</p>
-            <p className=' text-secondary font-medium text-xs'>Order Tracking</p>
+            <p className='pr-2 text-secondary font-medium text-xs md:text-sm border-r-2'>About Us</p>
+            <p className='pr-2 text-secondary font-medium text-xs md:text-sm border-r-2'>My Account</p>
+            <p className='pr-2 text-secondary font-medium text-xs md:text-sm border-r-2'>Wishlist</p>
+            <p className=' text-secondary font-medium text-xs md:text-sm'>Order Tracking</p>
           </li>
         </ul>
         </div>
@@ -42,48 +42,49 @@ const Navigation = () => {
       {/**Top Part End */}
       {/*Header Top Part*/}
       <div className='container'>
-    <div className='flex justify-between items-center py-8'>
-      <Link to="/">
+    <div className='flex justify-between items-center py-8 gap-8'>
+      <Link to="/" className='w-32 lg:w-auto'>
       <img src="/Logo.png" alt="Logo" />
       </Link>
-      <div className='border-2 border-brand p-5 rounded w-full max-w-[700px] flex items-center'>
-        <select name="" id="" className='pr-3.5 border-r-2 text-primary'>
+      <div className='border-2 border-brand p-2 lg:p-5 rounded w-full max-w-64 lg:max-w-[700px] hidden md:flex items-center'>
+        <select name="" id="" className='pr-3.5 border-r-2 text-primary hidden lg:block'>
           <option value="">All Categories</option>
           <option value="">All Categories</option>
           <option value="">All Categories</option>
         </select>
-         <input type="text" placeholder='Search for items' className='px-3.5 w-2/3'/>
+         <input type="text" placeholder='Search for items' className='px-3.5 w-full lg:w-2/3 outline-0'/>
          <FaSearch className='ml-auto'/>
       </div>
       <div>
-        <ul className='flex gap-6'>
+        <ul className='flex gap-6 lg:gap-8 text-sm'>
           <li>
             <Link to="/" className='flex gap-2 items-end relative text-secondary'>
-              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
-            <FaShoppingCart className='text-3xl text-primary'/>Cart
+              <span className='w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-brand text-white flex text-xs md:text-sm items-center justify-center absolute -top-2 md:-top-2 -right-2 md:right-17'>0</span>
+              <BiGitCompare className='text-2xl lg:text-3xl text-primary'/><span className='hidden md:block'>Compare</span>
             </Link>
           </li>
           <li>
             <Link to="/" className='flex gap-2 items-end relative text-secondary'>
-              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
-            <FaShoppingCart className='text-3xl text-primary'/>Cart
+            <span className='w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-brand text-white flex text-xs md:text-sm items-center justify-center absolute -top-2 md:-top-2 -right-2 md:right-14'>0</span>
+              <GiSelfLove className='text-2xl lg:text-3xl text-primary'/><span className='hidden md:block'>Wishlist</span>
             </Link>
           </li>
           <li>
             <Link to="/" className='flex gap-2 items-end relative text-secondary'>
-              <span className='w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center absolute -top-3 right-6'>0</span>
-            <FaShoppingCart className='text-3xl text-primary'/>Cart
+            <span className='w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-brand text-white flex text-xs md:text-sm items-center justify-center absolute -top-2 md:-top-2 -right-2 md:right-7'>0</span>
+            <FaShoppingCart className='text-2xl lg:text-3xl text-primary'/><span className='hidden md:block'>Cart</span>
             </Link>
           </li>
           <li>
             <Link to="/" className='flex gap-2 items-end relative text-secondary'>
-            <MdOutlineManageAccounts className='text-3xl text-primary'/>Account
+            <MdOutlineManageAccounts className='text-2xl lg:text-3xl text-primary'/><span className='hidden md:block'>Account</span>
             </Link>
           </li>
         </ul>
       </div>
       </div>
       </div>
+      {/* Main menu */}
       <nav>
         <div className='container flex items-center gap-9'>
           <div className='relative'>
@@ -176,6 +177,7 @@ const Navigation = () => {
           </Link>
         </div>
       </nav>
+      {/* Main menu */}
     </header>
   )
 }
