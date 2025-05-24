@@ -12,7 +12,7 @@ const Navigation = () => {
   const [show, setShow] = useState();
   const [sidebar, setSidebar] = useState();
   return (
-    <header className='relative'>
+    <header className='relative shadow-sm'>
       {/**Top Part */}
       <div className='container'>
         <div className='hidden lg:flex p-0 shadow-xs items-center justify-between'>
@@ -138,7 +138,7 @@ const Navigation = () => {
       </div>
       </div>
       {/* Main menu desktop view */}
-      <nav className='hidden md:block'>
+      <nav className='hidden md:block py-6 border-t border-[#ececec]'>
         <div className='container flex items-center gap-9'>
           <div className='relative'>
             <h3 onClick={()=> setShow (!show)} className='px-3 py-2 xl:px-6 xl:py-3 bg-brand rounded-md text-white text-xs xl:text-base font-bold flex items-center gap-2 cursor-pointer'>
@@ -146,7 +146,7 @@ const Navigation = () => {
             
             {show &&(
             
-            <div className='w-md rounded-lg absolute bg-white top-20 left-0 p-7 border-1 border-brand grid grid-cols-2 gap-6'>
+            <div className='w-md rounded-lg absolute bg-white top-15 xl:top-20 left-0 p-7 border-1 border-brand grid grid-cols-2 gap-6'>
                 <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
                   <img src="/category-1.svg" alt="category-1" className='w-6'/>
                   <p>Milks and Dairies</p>
