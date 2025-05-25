@@ -87,7 +87,7 @@ const Navigation = () => {
         </ul>
       </div>
       {/* Mainmenu mobile view */}
-      <nav className={`w-full h-screen bg-[rgba(0,0,0,0.5)] absolute top-0 left-0 transition-all ${ sidebar ? "-translate-x-0" : "-translate-x-full"} `}>
+      <nav className={`w-full h-screen bg-[rgba(0,0,0,0.5)] absolute top-0 left-0 transition-all z-50 ${ sidebar ? "-translate-x-0" : "-translate-x-full"} `}>
         <div className="w-[95%] h-full bg-white overflow-y-auto">
           <div className='flex justify-between items-center border-b border-[#ececec] pb-4 mb-4 px-4'>
           <Link to="/" className='w-32'>
@@ -146,7 +146,7 @@ const Navigation = () => {
             
             {show &&(
             
-            <div className='w-md rounded-lg absolute bg-white top-15 xl:top-20 left-0 p-7 border-1 border-brand grid grid-cols-2 gap-6'>
+            <div className='w-md rounded-lg absolute bg-white top-15 xl:top-20 left-0 p-7 border-1 border-brand grid grid-cols-2 gap-6 z-50'>
                 <div className='flex items-center gap-2 font-bold text-sm text-primary cursor-pointer shadow py-3 px-2 hover:text-brand hover:border-brand hover:shadow-brand rounded'>
                   <img src="/category-1.svg" alt="category-1" className='w-6'/>
                   <p>Milks and Dairies</p>
