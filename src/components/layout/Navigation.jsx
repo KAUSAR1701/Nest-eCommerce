@@ -51,7 +51,7 @@ const Navigation = () => {
       <img src="/Logo.png" alt="Logo" className='w-full'/>
       </Link>
       <div className='border-2 border-brand p-2 lg:p-5 rounded w-full max-w-64 lg:max-w-[700px] hidden md:flex items-center'>
-        <select name="" id="" className='pr-3.5 border-r-2 text-primary hidden lg:block'>
+        <select name="" id="" className='pr-3.5 border-r-2 border-slate-300 text-primary hidden lg:block'>
           <option value="">All Categories</option>
           <option value="">All Categories</option>
           <option value="">All Categories</option>
