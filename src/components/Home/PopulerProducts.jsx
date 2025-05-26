@@ -6,7 +6,7 @@ const PopulerProducts = () => {
     <section className="pb-12">
       <div className="container">
         <div className="flex justify-between flex-col lg:flex-row gap-7 items-center xl:items-end">
-          <h2 className="sectn_heading">Populer Products</h2>
+          <h2 className="sectn_heading">Popular Products</h2>
           <ul className="flex flex-wrap pb-3 font-light text-xs md:text-base text-primary gap-3 md:gap-7 group">
             <li>
               <button className="hover:text-brand cursor-pointer group-hover:scale-120 transition-all">
