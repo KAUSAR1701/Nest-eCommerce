@@ -4,6 +4,7 @@ import Categories from "../components/Home/Categories";
 import ProductBanner from "../components/Home/ProductBanner";
 import PopulerProducts from "../components/Home/PopulerProducts";
 import BestSells from "../components/Home/BestSells";
+import DealsOfDay from "../components/Home/DealsOfDay";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <ProductBanner />
       <PopulerProducts />
       <BestSells />
+      <DealsOfDay />
     </>
   );
 }

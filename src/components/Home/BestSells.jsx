@@ -12,8 +12,12 @@ const BestSells = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    nextArrow: <NextArrow customStyle="absolute -top-9 md:top-50 right-0" />,
-    prevArrow: <PrevArrow customStyle="absolute -top-9 md:top-50 left-0" />,
+    nextArrow: (
+      <NextArrow customStyle="absolute -top-9 top-40 lg:top-50 right-0" />
+    ),
+    prevArrow: (
+      <PrevArrow customStyle="absolute -top-9 top-40 lg:top-50 left-0" />
+    ),
     responsive: [
       {
         breakpoint: 1025,
@@ -89,14 +93,15 @@ const BestSells = () => {
             </div>
           </div>
         </div>
-
-        <Slider {...settings}>
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-          <ProductItem />
-        </Slider>
+        <div>
+          <Slider {...settings}>
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+          </Slider>
+        </div>
       </div>
     </section>
   );
