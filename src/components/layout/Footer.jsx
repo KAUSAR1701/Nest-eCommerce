@@ -1,5 +1,12 @@
 import React from "react";
 import { CiHeadphones, CiLocationOn } from "react-icons/ci";
+import {
+  FaFacebookF,
+  FaHeadset,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { GiAlarmClock } from "react-icons/gi";
 import { IoIosSend } from "react-icons/io";
 import { Link } from "react-router";
@@ -8,7 +15,7 @@ function Footer() {
   return (
     <footer>
       <div className="container">
-        <div className="grid grid-cols-6 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">
           <div>
             <img src="Logo.png" alt="Logo" />
             <p className="pt-4 pb-8 font-normal text-lg font-primary">
@@ -41,7 +48,7 @@ function Footer() {
                 </p>
               </li>
               <li>
-                <p className="pb-2.5 flex items-center gap-2 font-normal text-base font-primary">
+                <p className="pb-11 flex items-center gap-2 font-normal text-base font-primary">
                   <div className="text-brand">
                     <GiAlarmClock />
                   </div>
@@ -183,6 +190,85 @@ function Footer() {
                 className="w-52"
               />
             </Link>
+          </div>
+        </div>
+        <div className="flex justify-between items-center py-6 border-t border-[#BCE3C9]">
+          <p className="font-normal text-xs lg:text-sm text-secondary w-72 hidden md:block">
+            © 2024, Nest - HTML Ecommerce Template All rights reserved
+          </p>
+          <div className="flex gap-1 lg:gap-3.5">
+            <Link
+              to="tell:1900 - 888"
+              className="ml-auto flex items-center gap-2"
+            >
+              <FaHeadset className="text-3xl text-secondary hidden md:block" />
+              <div>
+                <p className="text-sm lg:text-2xl text-brand font-bold">
+                  1900 - 6666
+                </p>
+                <p className="text-xs text-secondary font-medium">
+                  Working 8:00 - 22:00
+                </p>
+              </div>
+            </Link>
+            <Link
+              to="tell:1900 - 888"
+              className="ml-auto flex items-center gap-2"
+            >
+              <FaHeadset className="text-3xl text-secondary hidden md:block" />
+              <div>
+                <p className="text-sm lg:text-2xl text-brand font-bold">
+                  1900 - 888
+                </p>
+                <p className="text-xs text-secondary font-medium">
+                  24/7 Support Center
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <div className="lg:flex items-center gap-1 lg:gap-3.5">
+              <p className="font-bold text-sm lg:text-lg text-primary">
+                Follow us
+              </p>
+              <ul className="flex gap-3">
+                <li>
+                  <Link
+                    to="/"
+                    className="w-8 h-8 rounded-full bg-brand flex justify-center items-center text-white"
+                  >
+                    <FaFacebookF />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="w-8 h-8 rounded-full bg-brand flex justify-center items-center text-white"
+                  >
+                    <FaTwitter />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="w-8 h-8 rounded-full bg-brand flex justify-center items-center text-white"
+                  >
+                    <FaInstagram />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="w-8 h-8 rounded-full bg-brand flex justify-center items-center text-white"
+                  >
+                    <FaYoutube />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <p className="font-normal text-sm text-secondary">
+              Up to 15% discount on your first subscribe
+            </p>
           </div>
         </div>
       </div>
