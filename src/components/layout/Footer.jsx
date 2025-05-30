@@ -13,11 +13,13 @@ import { Link } from "react-router";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="pt-12">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">
           <div>
-            <img src="Logo.png" alt="Logo" />
+            <Link to="/">
+              <img src="Logo.png" alt="Logo" />
+            </Link>
             <p className="pt-4 pb-8 font-normal text-lg font-primary">
               Awesome grocery store website template
             </p>

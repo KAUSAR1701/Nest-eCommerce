@@ -1,9 +1,9 @@
 import React from "react";
-import DealCard from "./DealCard";
+import DealCard from "../Home/DealCard";
 
 const DealsOfDay = () => {
   return (
-    <section className="pb-12">
+    <section className="pb-20">
       <div className="container">
         <div className="flex justify-between flex-col lg:flex-row gap-7 items-center xl:items-end">
           <h2 className="sectn_heading">Deals Of The Day</h2>

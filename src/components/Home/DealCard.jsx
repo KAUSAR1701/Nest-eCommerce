@@ -6,7 +6,7 @@ const DealCard = () => {
   return (
     <section>
       <div className="relative group">
-        <div className="pb-14">
+        <div className="pb-12">
           <img src="/DealsBanner1.png" alt="DealsBanner1" className="w-full" />
         </div>
         <div className="w-5/6 absolute transition-all top-1/3 left-1/2 -translate-x-1/2 group-hover:-translate-y-1 md:group-hover:-translate-y-3">

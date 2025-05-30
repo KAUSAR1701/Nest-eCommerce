@@ -75,7 +75,7 @@ const BestSells = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center pt-12">
+        {/* <div className="flex items-center pt-12">
           <div
             className="py-16 px-12 bg-no-repeat bg-center bg-cover rounded-xl w-96"
             style={{ backgroundImage: "url(/BestSells1.png)" }}
@@ -92,8 +92,8 @@ const BestSells = () => {
               </Link>
             </div>
           </div>
-        </div>
-        <div>
+        </div> */}
+        <div className="pt-12">
           <Slider {...settings}>
             <ProductItem />
             <ProductItem />
