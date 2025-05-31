@@ -181,7 +181,7 @@ const Navigation = () => {
                   </li>
                   <li className="w-full">
                     <Link
-                      to="/"
+                      to="/About"
                       className="block border-b border-[#ececec] py-2 hover:text-brand transition"
                     >
                       About
@@ -322,7 +322,7 @@ const Navigation = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover:text-brand transition">
+              <Link to="/About" className="hover:text-brand transition">
                 About
               </Link>
             </li>
