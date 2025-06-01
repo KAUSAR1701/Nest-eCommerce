@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from "react-router";
 
 const ProductItem = () => {
   return (
@@ -10,9 +11,12 @@ const ProductItem = () => {
       </div>
       <img src="/productItem1.png" alt="productItem1" className="w-full" />
       <h4 className="font-normal text-xs text-secondary">Snack</h4>
-      <h3 className="font-bold text-xs lg:text-base text-primary">
+      <Link
+        to="/ProductDetails"
+        className="font-bold text-xs lg:text-base text-primary hover:text-brand transition-all"
+      >
         Seeds of Change Organic Quinoa, Brown, & Red Rice
-      </h3>
+      </Link>
       <div className="flex gap-1 lg:gap-3 py-1 lg:py-2.5">
         <ul className="flex text-amber-400 text-xs lg:text-sm">
           <li>
